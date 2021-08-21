@@ -1,0 +1,22 @@
+.footer {
+  background-color: beige;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.logo {
+  width: 15%;
+  padding: 1%;
+}
+
+.follow-us {
+  width: fit-content;
+  right: 5%;
+  position: absolute;
+  bottom: 20%;
+}
+
+.follow-icon {
+  width: fit-content;
+}

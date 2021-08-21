@@ -13,11 +13,31 @@ import "_styles/Flexbox.css";
 
 export const Header = (props) => {
   return (
-    <div style={{ backgroundColor: "beige", width: "100%", height: 150 }}>
+    <div style={{ backgroundColor: "transparent", width: "100%", height: 150 }}>
       <div>
         <div style={{ padding: "3%", position: "absolute" }}>
           <img src={logo} alt={"logo"} />
         </div>
+        {props.team ? (
+          <div
+            style={{
+              padding: "3%",
+              position: "absolute",
+              left: "40%",
+            }}
+          >
+            <TeamButton></TeamButton>
+          </div>
+        ) : (
+          <div></div>
+        )}
+        {props.work ? (
+          <div style={{ padding: "3%", position: "absolute", left: "50%" }}>
+            <WorkButton></WorkButton>
+          </div>
+        ) : (
+          <div></div>
+        )}
         <div style={{ padding: "3%", position: "absolute", right: "0.1%" }}>
           <ContactUsButton></ContactUsButton>
         </div>
@@ -47,7 +67,7 @@ const ContactUsButton = (props) => {
             border: "transparent",
             width: "55%",
             margin: "auto",
-            height: "60%",
+            maxHeight: 350,
             borderRadius: 10,
             padding: 0,
           },
@@ -96,9 +116,11 @@ const ContactusModal = (props) => {
         className="gradient"
         style={{
           width: "100%",
-          height: "12vh",
+          height: "auto",
           padding: 0,
-          marginTop: "8%",
+          marginBottom: 0,
+          position: "absolute",
+          bottom: 0,
         }}
       >
         {/* TODO */}
@@ -148,11 +170,38 @@ const ContactAt = (props) => {
               marginTop: "5%",
             }}
           />
-
           <p className="titleContent" style={{ textAlign: "left" }}>
             {props.text1} <br></br> {props.text2}
           </p>
         </a>
+      </button>
+    </div>
+  );
+};
+
+const TeamButton = (props) => {
+  return (
+    <button
+      style={{
+        backgroundColor: "transparent",
+        borderColor: "transparent",
+      }}
+    >
+      <p className="headerFont">Team</p>
+    </button>
+  );
+};
+
+const WorkButton = (props) => {
+  return (
+    <div>
+      <button
+        style={{
+          backgroundColor: "transparent",
+          borderColor: "transparent",
+        }}
+      >
+        <p className="headerFont">Work</p>
       </button>
     </div>
   );
