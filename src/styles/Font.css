@@ -1,0 +1,22 @@
+/* TYPOGRAPHY */
+
+.headerFont {
+  font-size: 2vw;
+  color: "#8EAB3D";
+  font-weight: bold;
+}
+
+.headerContent {
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+
+.titleFont {
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+
+.titleContent {
+  font-size: 1.2vw;
+  font-weight: normal;
+}

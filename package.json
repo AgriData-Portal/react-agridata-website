@@ -1,22 +1,44 @@
 {
-  "name": "agri-data-website",
-  "version": "1.0.0",
+  "name": "agridata-website-react-new",
+  "version": "0.1.0",
   "private": true,
-  "description": "AgriData Website",
-  "author": "ChrisKimo",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
   "dependencies": {
-    "gatsby": "^3.11.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-modal": "^3.14.3",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "react-app-rewire-alias": "^1.0.3",
+    "react-app-rewired": "^2.1.8"
   }
 }
