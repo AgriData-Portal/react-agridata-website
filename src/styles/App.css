@@ -50,3 +50,10 @@
     rgba(122, 196, 253, 0.79) 126.46%
   );
 }
+
+.App-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  width: 100%;
+}

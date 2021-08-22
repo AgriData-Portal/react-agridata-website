@@ -39,8 +39,13 @@ export const Footer = (props) => {
         </div>
         <div
           style={{
+            backgroundColor: "blue",
+            height: "auto",
             flexDirection: "row",
             display: "flex",
+
+            right: "100%",
+            width: "200%",
           }}
         >
           <FollowIcon
