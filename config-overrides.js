@@ -6,6 +6,7 @@ module.exports = function override(config) {
     _images: "src/images",
     _styles: "src/styles",
     _pages: "src/pages",
+    _elements: "src/components/elements",
   })(config);
 
   return config;

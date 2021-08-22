@@ -6,9 +6,8 @@ function App() {
   return (
     <div>
       <Landing></Landing>
-      <div className="App-footer">
-        <Footer></Footer>
-      </div>
+
+      <Footer></Footer>
     </div>
   );
 }
