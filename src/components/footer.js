@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import styled from "@emotion/styled";
-
+import React from "react";
 import facebook from "_images/footer/facebook_vector.png";
 import instagram from "_images/footer/instagram_vector.png";
 import whatsapp from "_images/footer/whatsapp_vector.png";
-
 import { Logo } from "_elements";
-
 import { CopyRightText, FollowUsText } from "_styles/font";
 
 export const Footer = (props) => {
@@ -62,9 +58,12 @@ const FollowIcon = (props) => {
   );
 };
 
-const FooterWrapper = styled.div`
-  height: auto;
-  background: transparent;
-  display: block;
-  padding: 100px 5vw 5vw 5vw;
-`;
+const FooterWrapper = ({ children }) => {
+  return <div style={{ padding: "5vw" }}>{children} </div>;
+};
+
+// const FooterWrapper = styled.div`
+//   height: auto;
+//   background: transparent;
+//   padding: 100px 5vw 5vw 5vw;
+// `;

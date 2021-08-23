@@ -4,8 +4,9 @@ import Modal from "react-modal";
 import facebook from "_images/footer/facebook_vector.png";
 import instagram from "_images/footer/instagram_vector.png";
 import whatsapp from "_images/footer/whatsapp_vector.png";
-import logo from "_images/Header/Agridata-Logo-1.png";
+
 import contactUs from "_images/Header/contact-us.png";
+import { Logo } from "_elements";
 
 import "_styles/App.css";
 import "_styles/Font.css";
@@ -13,39 +14,83 @@ import "_styles/Flexbox.css";
 
 export const Header = (props) => {
   return (
-    <div style={{ backgroundColor: "transparent", width: "100%", height: 150 }}>
-      <div>
-        <div style={{ padding: "3%", position: "absolute" }}>
-          <img src={logo} alt={"logo"} />
+    <HeaderWrapper>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+
+          alignItems: "center",
+        }}
+      >
+        <div style={{ marginRight: "25vw" }}>
+          <Logo size="big" />
         </div>
-        {props.team ? (
+        {true ? (
           <div
             style={{
-              padding: "3%",
-              position: "absolute",
-              left: "40%",
+              display: "flex",
+              flexDirection: "row",
             }}
           >
             <TeamButton></TeamButton>
-          </div>
-        ) : (
-          <div></div>
-        )}
-        {props.work ? (
-          <div style={{ padding: "3%", position: "absolute", left: "50%" }}>
             <WorkButton></WorkButton>
           </div>
         ) : (
           <div></div>
         )}
-        <div style={{ padding: "3%", position: "absolute", right: "0.1%" }}>
-          <ContactUsButton></ContactUsButton>
+        <div style={{ marginLeft: "25vw" }}>
+          <ContactUsButton />
         </div>
       </div>
-    </div>
+      {/* <div
+        style={{
+          backgroundColor: "green",
+          width: "100%",
+          height: 100,
+          display: "flex",
+        }}
+      >
+        <div>
+          <div style={{ padding: "3%", position: "absolute" }}>
+            <img src={logo} alt={"logo"} />
+          </div>
+          {props.team ? (
+            <div
+              style={{
+                padding: "3%",
+                position: "absolute",
+                left: "40%",
+              }}
+            >
+              <TeamButton></TeamButton>
+            </div>
+          ) : (
+            <div></div>
+          )}
+          {props.work ? (
+            <div style={{ padding: "3%", position: "absolute", left: "50%" }}>
+              <WorkButton></WorkButton>
+            </div>
+          ) : (
+            <div></div>
+          )}
+          <div style={{ padding: "3%", position: "absolute", right: "0.1%" }}>
+            <ContactUsButton></ContactUsButton>
+          </div>
+        </div> 
+      </div>*/}
+    </HeaderWrapper>
   );
 };
 
+const HeaderWrapper = ({ children }) => {
+  return (
+    <div style={{ paddingTop: "3vh", paddingRight: "5vw", paddingLeft: "5vw" }}>
+      {children}{" "}
+    </div>
+  );
+};
 const ContactUsButton = (props) => {
   const [contactUsModal, setContactUsModal] = useState(false);
   return (
