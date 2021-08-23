@@ -19,11 +19,10 @@ export const Header = (props) => {
         style={{
           display: "flex",
           justifyContent: "center",
-
           alignItems: "center",
         }}
       >
-        <div style={{ marginRight: "25vw" }}>
+        <div>
           <Logo size="big" />
         </div>
         {true ? (
@@ -31,6 +30,7 @@ export const Header = (props) => {
             style={{
               display: "flex",
               flexDirection: "row",
+              margin: "auto",
             }}
           >
             <TeamButton setLink={props.setLink}></TeamButton>
@@ -39,7 +39,7 @@ export const Header = (props) => {
         ) : (
           <div></div>
         )}
-        <div style={{ marginLeft: "25vw" }}>
+        <div>
           <ContactUsButton />
         </div>
       </div>
