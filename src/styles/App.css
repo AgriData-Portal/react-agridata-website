@@ -57,3 +57,53 @@
   background-color: red;
   width: 100%;
 }
+
+.teamBody {
+  font-family: "Nunito Sans", sans-serif;
+
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+        116.72deg,
+        #ffffff 7.84%,
+        rgba(244, 252, 255, 0.81) 16.36%,
+        rgba(233, 247, 255, 0.85) 30.36%,
+        rgba(203, 234, 255, 0.9566) 55.29%,
+        rgba(186, 225, 254, 0.9) 67.46%,
+        rgba(180, 222, 254, 0.94) 76.31%,
+        rgba(122, 196, 253, 0.79) 102.24%
+      )
+      fixed,
+    rgba(244, 252, 255, 0.4);
+  color: #444344;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.teamBody h1 {
+  width: 60%;
+  margin: auto;
+  padding-top: 3vw;
+  font-size: 4.875vw;
+  font-weight: 900;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.teamBody h2 {
+  font-size: 1.3vw;
+  width: 50%;
+  margin: auto;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.carousel-item-padding-40-px {
+  padding-left: "5vw";
+}

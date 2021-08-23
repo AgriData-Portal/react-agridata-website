@@ -8,6 +8,7 @@ const HomePage = (props) => {
   return (
     <div>
       <Landing setLink={props.setLink}></Landing>
+      <Footer></Footer>
     </div>
   );
 };
