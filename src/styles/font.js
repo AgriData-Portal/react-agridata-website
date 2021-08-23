@@ -11,9 +11,16 @@ export const CopyRightText = ({ children }) => {
 
 //Can do a if else for phone or desktop if ... return ... else, return ...
 
-export const FollowUsText = ({ children }) => {
+export const FollowUsText = ({ children, ...otherProps }) => {
   return (
-    <p style={{ fontSize: "2vw", color: "black", fontWeight: "bold" }}>
+    <p
+      style={{
+        fontSize: "2vw",
+        color: "black",
+        fontWeight: "bold",
+        ...otherProps.style,
+      }}
+    >
       {children}
     </p>
   );
