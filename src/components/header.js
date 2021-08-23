@@ -33,8 +33,8 @@ export const Header = (props) => {
               flexDirection: "row",
             }}
           >
-            <TeamButton></TeamButton>
-            <WorkButton></WorkButton>
+            <TeamButton setLink={props.setLink}></TeamButton>
+            <WorkButton setLink={props.setLink}></WorkButton>
           </div>
         ) : (
           <div></div>
@@ -231,6 +231,7 @@ const TeamButton = (props) => {
         backgroundColor: "transparent",
         borderColor: "transparent",
       }}
+      onClick={() => props.setLink(0)}
     >
       <p className="headerFont">Team</p>
     </button>
@@ -245,6 +246,7 @@ const WorkButton = (props) => {
           backgroundColor: "transparent",
           borderColor: "transparent",
         }}
+        onClick={() => props.setLink(1)}
       >
         <p className="headerFont">Work</p>
       </button>

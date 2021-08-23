@@ -9,7 +9,7 @@ import imgRight from "_images/Home/IMG_0173 1.png";
 export const Landing = (props) => {
   return (
     <div>
-      <Header></Header>
+      <Header setLink={props.setLink}></Header>
       <div>
         <div
           style={{

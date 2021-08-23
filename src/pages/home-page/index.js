@@ -1,15 +1,15 @@
+import React, { useState } from "react";
 import { Landing } from "_pages/home-page/landing";
 import { Footer } from "_components/footer";
+
 import "_styles/App.css";
 
-function App() {
+const HomePage = (props) => {
   return (
     <div>
-      <Landing></Landing>
-
-      <Footer></Footer>
+      <Landing setLink={props.setLink}></Landing>
     </div>
   );
-}
+};
 
-export { App };
+export { HomePage };

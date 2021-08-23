@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "_styles/index.css";
-import { App } from "_pages/home-page/index";
+import { HomePage, AboutPage } from "_pages";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
@@ -15,3 +15,16 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+function App() {
+  const [link, setLink] = useState(0);
+  return (
+    <div>
+      {link === 0 ? (
+        <HomePage setLink={setLink}></HomePage>
+      ) : (
+        <AboutPage setLink={setLink}></AboutPage>
+      )}
+    </div>
+  );
+}
