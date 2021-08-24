@@ -107,3 +107,16 @@
 .carousel-item-padding-40-px {
   padding-left: "5vw";
 }
+
+.backgroundGradient {
+  background: linear-gradient(
+    315.47deg,
+    #ffffff 2.69%,
+    rgba(244, 252, 255, 0.81) 15.79%,
+    rgba(233, 247, 255, 0.85) 37.29%,
+    rgba(203, 234, 255, 0.9566) 75.59%,
+    rgba(186, 225, 254, 0.9) 94.27%,
+    rgba(180, 222, 254, 0.94) 107.86%,
+    rgba(122, 196, 253, 0.79) 147.69%
+  );
+}

@@ -6,6 +6,9 @@ import instagram from "_images/footer/instagram_vector.png";
 import whatsapp from "_images/footer/whatsapp_vector.png";
 
 import contactUs from "_images/Header/contact-us.png";
+import contactUsWhite from "_images/Header/contactUsWhite.png";
+import appStore from "_images/Header/App store.png";
+import googlePlay from "_images/Header/Google Play.png";
 import { Logo } from "_elements";
 
 import "_styles/App.css";
@@ -84,6 +87,46 @@ export const Header = (props) => {
   );
 };
 
+export const HeaderLanding = (props) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        marginLeft: "2vw",
+        marginRight: "2vw",
+        marginTop: 30,
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ marginLeft: 20 }}>
+        {" "}
+        <Logo size="big" />
+      </div>
+      <div>
+        <img
+          alt={"Google Play Store"}
+          src={googlePlay}
+          draggable={false}
+          style={{ width: 160, height: "auto", paddingTop: 8 }}
+        />
+        <img
+          alt={"Apple App Store"}
+          src={appStore}
+          draggable={false}
+          style={{ width: 160, height: "auto", paddingTop: 8 }}
+        />
+        <img
+          alt={"Contact Us"}
+          src={contactUsWhite}
+          draggable={false}
+          style={{ width: 140, height: "auto" }}
+        />
+      </div>
+    </div>
+  );
+};
 const HeaderWrapper = ({ children }) => {
   return (
     <div style={{ paddingTop: "3vh", paddingRight: "5vw", paddingLeft: "5vw" }}>
