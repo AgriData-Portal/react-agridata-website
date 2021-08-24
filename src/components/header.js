@@ -48,44 +48,7 @@ export const Header = (props) => {
       <div>
         <ContactUsButton />
       </div>
-      {/* <div
-        style={{
-          backgroundColor: "green",
-          width: "100%",
-          height: 100,
-          display: "flex",
-        }}
-      >
-        <div>
-          <div style={{ padding: "3%", position: "absolute" }}>
-            <img src={logo} alt={"logo"} />
-          </div>
-          {props.team ? (
-            <div
-              style={{
-                padding: "3%",
-                position: "absolute",
-                left: "40%",
-              }}
-            >
-              <TeamButton></TeamButton>
-            </div>
-          ) : (
-            <div></div>
-          )}
-          {props.work ? (
-            <div style={{ padding: "3%", position: "absolute", left: "50%" }}>
-              <WorkButton></WorkButton>
-            </div>
-          ) : (
-            <div></div>
-          )}
-          <div style={{ padding: "3%", position: "absolute", right: "0.1%" }}>
-            <ContactUsButton></ContactUsButton>
-          </div>
-        </div> 
-      </div>*/}
-    </HeaderWrapper>
+    </div>
   );
 };
 
@@ -96,8 +59,8 @@ export const HeaderLanding = (props) => {
         display: "flex",
         marginLeft: "2vw",
         marginRight: "2vw",
-        marginTop: 30,
         flexWrap: "wrap",
+        paddingTop: "2vw",
         justifyContent: "space-between",
         alignItems: "center",
       }}
