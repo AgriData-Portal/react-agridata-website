@@ -21,3 +21,36 @@
   font-weight: normal;
 }
 
+.modalName {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.8vw;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.modalTitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2vw;
+  display: flex;
+  align-items: center;
+  color: #8eab3d;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.modalContent {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2vw;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
