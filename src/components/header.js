@@ -14,83 +14,41 @@ import "_styles/Flexbox.css";
 
 export const Header = (props) => {
   return (
-    <HeaderWrapper>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div>
-          <Logo size="big" />
-        </div>
-        {true ? (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              margin: "auto",
-            }}
-          >
-            <TeamButton setLink={props.setLink}></TeamButton>
-            <WorkButton setLink={props.setLink}></WorkButton>
-          </div>
-        ) : (
-          <div></div>
-        )}
-        <div>
-          <ContactUsButton />
-        </div>
+    <div
+      style={{
+        marginTop: "3vh",
+        marginRight: "5vw",
+        marginLeft: "5vw",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ paddingLeft: 15 }}>
+        {/* TODO fix image padding */}
+        <Logo size="big" />
       </div>
-      {/* <div
-        style={{
-          backgroundColor: "green",
-          width: "100%",
-          height: 100,
-          display: "flex",
-        }}
-      >
-        <div>
-          <div style={{ padding: "3%", position: "absolute" }}>
-            <img src={logo} alt={"logo"} />
-          </div>
-          {props.team ? (
-            <div
-              style={{
-                padding: "3%",
-                position: "absolute",
-                left: "40%",
-              }}
-            >
-              <TeamButton></TeamButton>
-            </div>
-          ) : (
-            <div></div>
-          )}
-          {props.work ? (
-            <div style={{ padding: "3%", position: "absolute", left: "50%" }}>
-              <WorkButton></WorkButton>
-            </div>
-          ) : (
-            <div></div>
-          )}
-          <div style={{ padding: "3%", position: "absolute", right: "0.1%" }}>
-            <ContactUsButton></ContactUsButton>
-          </div>
-        </div> 
-      </div>*/}
-    </HeaderWrapper>
-  );
-};
-
-const HeaderWrapper = ({ children }) => {
-  return (
-    <div style={{ paddingTop: "3vh", paddingRight: "5vw", paddingLeft: "5vw" }}>
-      {children}{" "}
+      {true ? (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            margin: "auto",
+          }}
+        >
+          <TeamButton setLink={props.setLink}></TeamButton>
+          <WorkButton setLink={props.setLink}></WorkButton>
+        </div>
+      ) : (
+        <div></div>
+      )}
+      <div>
+        <ContactUsButton />
+      </div>
     </div>
   );
 };
+
 const ContactUsButton = (props) => {
   const [contactUsModal, setContactUsModal] = useState(false);
   return (
