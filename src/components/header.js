@@ -17,34 +17,36 @@ import "_styles/Flexbox.css";
 
 export const Header = (props) => {
   return (
-    <HeaderWrapper>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div>
-          <Logo size="big" />
+    <div
+      style={{
+        marginTop: "3vh",
+        marginRight: "5vw",
+        marginLeft: "5vw",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ paddingLeft: 15 }}>
+        {/* TODO fix image padding */}
+        <Logo size="big" />
+      </div>
+      {true ? (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            margin: "auto",
+          }}
+        >
+          <TeamButton setLink={props.setLink}></TeamButton>
+          <WorkButton setLink={props.setLink}></WorkButton>
         </div>
-        {true ? (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              margin: "auto",
-            }}
-          >
-            <TeamButton setLink={props.setLink}></TeamButton>
-            <WorkButton setLink={props.setLink}></WorkButton>
-          </div>
-        ) : (
-          <div></div>
-        )}
-        <div>
-          <ContactUsButton />
-        </div>
+      ) : (
+        <div></div>
+      )}
+      <div>
+        <ContactUsButton />
       </div>
       {/* <div
         style={{
@@ -134,6 +136,7 @@ const HeaderWrapper = ({ children }) => {
     </div>
   );
 };
+
 const ContactUsButton = (props) => {
   const [contactUsModal, setContactUsModal] = useState(false);
   return (
