@@ -56,11 +56,19 @@ export const Landing = (props) => {
                 src={appButton}
                 style={{ width: "15vw" }}
               ></img>
-              <img
-                alt={"The Team Button"}
-                src={teamButton}
-                style={{ width: "15vw" }}
-              ></img>
+              <button
+                onClick={() => props.setLink(1)}
+                style={{
+                  backgroundColor: "transparent",
+                  borderColor: "transparent",
+                }}
+              >
+                <img
+                  alt={"The Team Button"}
+                  src={teamButton}
+                  style={{ width: "15vw" }}
+                ></img>
+              </button>
             </div>
           </div>
         </div>
@@ -74,15 +82,6 @@ export const Landing = (props) => {
           }}
         >
           <img alt="2020 Winner" src={myWinner} style={{ width: "20vw" }}></img>
-        </div>
-      </div>
-      <div>
-        <p>AS FEATURED IN</p>
-        <div>
-          <img alt={"New Straits Times"} src={straitsTimes}></img>
-          <img alt={"Daily Express"} src={dailyExpress}></img>
-          <img alt={"Borneo Post"} src={borneoPost}></img>
-          <img alt={"The Malaysian Reserve"} src={malaysiaReserve}></img>
         </div>
       </div>
     </div>

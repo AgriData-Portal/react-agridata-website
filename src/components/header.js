@@ -39,6 +39,7 @@ export const Header = (props) => {
             margin: "auto",
           }}
         >
+          {/* TODO change link index to navigate*/}
           <TeamButton setLink={props.setLink}></TeamButton>
           <WorkButton setLink={props.setLink}></WorkButton>
         </div>
@@ -66,7 +67,6 @@ export const HeaderLanding = (props) => {
       }}
     >
       <div style={{ marginLeft: 20 }}>
-        {" "}
         <Logo size="big" />
       </div>
       <div>
