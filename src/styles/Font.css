@@ -76,3 +76,51 @@
   align-items: center;
   color: #444443;
 }
+
+.asFeatured {
+  font-family: Nunito Sans;
+  font-size: 4vw;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.whoWeAreTitle {
+  font-family: Nunito Sans;
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 8vw;
+}
+
+.agriTitle {
+  font-family: Nunito Sans;
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0em;
+  text-align: right;
+  margin-right: 8vw;
+}
+
+.whoWeAreBody {
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 8vw;
+}
+
+.agriBody {
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: right;
+  margin-right: 8vw;
+}
