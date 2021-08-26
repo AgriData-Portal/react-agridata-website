@@ -55,6 +55,15 @@
   padding-right: 2vw;
 }
 
+.agMarket {
+  font-family: Nunito Sans;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
 .homeHeadingFont {
   font-family: Nunito Sans;
   font-style: normal;

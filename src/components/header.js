@@ -7,8 +7,6 @@ import whatsapp from "_images/footer/whatsapp_vector.png";
 
 import contactUs from "_images/Header/contact-us.png";
 import contactUsWhite from "_images/Header/contactUsWhite.png";
-import appStore from "_images/Header/App store.png";
-import googlePlay from "_images/Header/Google Play.png";
 import { Logo } from "_elements";
 
 import "_styles/App.css";
@@ -69,25 +67,22 @@ export const HeaderLanding = (props) => {
       <div style={{ marginLeft: 20 }}>
         <Logo size="big" />
       </div>
-      <div>
-        <img
-          alt={"Google Play Store"}
-          src={googlePlay}
-          draggable={false}
-          style={{ width: 160, height: "auto", paddingTop: 8 }}
-        />
-        <img
-          alt={"Apple App Store"}
-          src={appStore}
-          draggable={false}
-          style={{ width: 160, height: "auto", paddingTop: 8 }}
-        />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          background: "red",
+          justifyContent: "space-between",
+        }}
+      >
+        <p class="agMarket">AG-Market</p>
+        <p class="agMarket">About Us</p>
         <img
           alt={"Contact Us"}
           src={contactUsWhite}
           draggable={false}
           style={{ width: 140, height: "auto" }}
-        />
+        ></img>
       </div>
     </div>
   );
