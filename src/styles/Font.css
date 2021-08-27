@@ -56,10 +56,10 @@
 }
 
 .agMarket {
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans";
   font-size: 2vw;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   letter-spacing: 0em;
   text-align: center;
 }
