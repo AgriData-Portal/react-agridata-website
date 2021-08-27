@@ -11,8 +11,6 @@ export const max = (num1, num2, num3, num4) => {
     }
   } else if (typeof num2 == "string" && typeof num1 == "number") {
     if (num2.includes("vw")) {
-      console.log(parseInt(num2.slice(0, num2.length - 2)));
-      console.log(parseInt(num2.slice(0, num2.length - 2)) * num3);
       return (parseInt(num2.slice(0, num2.length - 2)) * num3) / 100 > num1
         ? num1
         : (parseInt(num2.slice(0, num2.length - 2)) * num3) / 100;

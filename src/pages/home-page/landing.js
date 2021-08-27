@@ -21,7 +21,6 @@ export const Landing = (props) => {
         maxHeight: 1080,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
       }}
     >
       <HeaderLanding setLink={props.setLink}></HeaderLanding>
@@ -38,28 +37,35 @@ export const Landing = (props) => {
           alt={"Phone Home"}
           src={phoneHome}
           style={{
-            width: "50vw",
+            width: "28.5vw",
             height: "auto",
             paddingTop: 8,
           }}
         />
-        <div style={{ marginTop: "5vw" }}>
-          <Font.Heading3 style={{ color: "#8EAB3D" }}>
-            The Future of Malaysia’s Agrispace is here.
+        <div style={{ marginTop: "4vw", marginLeft: "5vw" }}>
+          <Font.Heading3
+            style={{
+              color: "#8EAB3D",
+              lineHeight: "4vw",
+              height: "12vw",
+              marginBottom: "2vh",
+            }}
+          >
+            THE FUTURE OF MALAYSIA'S AGRISPACE IS HERE.
           </Font.Heading3>
-          <Font.Sub4>
+          <Font.Sub4 style={{ marginBottom: "5vh" }}>
             A procurement and management app for retailers to source and secure
             goods, monitor transactions, and gain insights to improve their
             business.
           </Font.Sub4>
-          <Font.Sub3 style={{ color: "#F4C621" }}>
+          <Font.Sub3 style={{ color: "#F4C621", marginBottom: 0 }}>
             Download Now for Free
           </Font.Sub3>
-          <div style={{ marginTop: "3vw" }}>
+          <div>
             <img
               alt={"Google Play"}
               src={googlePlay}
-              style={{ width: "15vw" }}
+              style={{ width: "12vw" }}
             ></img>
             <button
               onClick={() => props.setLink(1)}
@@ -71,7 +77,7 @@ export const Landing = (props) => {
               <img
                 alt={"App Store"}
                 src={appStore}
-                style={{ width: "15vw" }}
+                style={{ width: "12vw" }}
               ></img>
             </button>
             <div
@@ -79,13 +85,13 @@ export const Landing = (props) => {
                 alignSelf: "flex-end",
                 justifyContent: "flex-end",
                 display: "flex",
-                marginRight: "3vw",
+                marginTop: "5vw",
               }}
             >
               <img
                 alt="2020 Winner"
                 src={myWinner}
-                style={{ width: "20vw" }}
+                style={{ width: "12vw" }}
               ></img>
             </div>
           </div>

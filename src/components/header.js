@@ -1,11 +1,10 @@
-//Libraries
 import React, { useState } from "react";
 import Modal from "react-modal";
 
-//Components
 import facebook from "_images/footer/facebook_vector.png";
 import instagram from "_images/footer/instagram_vector.png";
 import whatsapp from "_images/footer/whatsapp_vector.png";
+
 import contactUs from "_images/Header/contact-us.png";
 import contactUsWhite from "_images/Header/contactUsWhite.png";
 import { Logo } from "_elements";
@@ -14,10 +13,6 @@ import Font from "_styles";
 import "_styles/App.css";
 import "_styles/Font.css";
 import "_styles/Flexbox.css";
-
-//Functions
-import { screenSize } from "_store";
-import { max } from "_utils";
 
 export const Header = (props) => {
   return (
@@ -58,8 +53,6 @@ export const Header = (props) => {
 };
 
 export const HeaderLanding = (props) => {
-  const width = screenSize((state) => state.width);
-  const height = screenSize((state) => state.height);
   return (
     <div
       style={{
@@ -67,7 +60,7 @@ export const HeaderLanding = (props) => {
         marginLeft: "2vw",
         marginRight: "2vw",
         flexWrap: "wrap",
-
+        paddingTop: "2vw",
         justifyContent: "space-between",
         alignItems: "center",
       }}
@@ -78,33 +71,26 @@ export const HeaderLanding = (props) => {
       <div
         style={{
           display: "flex",
-          margin: max(20, "20vw", width, height),
+          flexDirection: "row",
+          justifyContent: "space-between",
         }}
       >
-        <Font.Button3
-          style={{
-            margin: max(10, "10vw", width, height),
-            marginTop: "1.3vw",
-          }}
-        >
-          AG-Market
-        </Font.Button3>
-        <Font.Button3
-          style={{ margin: max(10, "10vw", width, height), marginTop: "1.3vw" }}
-        >
-          About Us
-        </Font.Button3>
+        <Font.Button2 style={{ marginRight: "1vw" }}>AG-Market</Font.Button2>
+        <Font.Button2 style={{ marginRight: "1vw" }}>About Us</Font.Button2>
         <img
           alt={"Contact Us"}
           src={contactUsWhite}
           draggable={false}
-          style={{
-            maxWidth: "10vw",
-            height: "auto",
-            marginBottom: "5vh",
-          }}
+          style={{ width: 140, height: "auto" }}
         ></img>
       </div>
+    </div>
+  );
+};
+const HeaderWrapper = ({ children }) => {
+  return (
+    <div style={{ paddingTop: "3vh", paddingRight: "5vw", paddingLeft: "5vw" }}>
+      {children}{" "}
     </div>
   );
 };
@@ -120,7 +106,7 @@ const ContactUsButton = (props) => {
           borderColor: "transparent",
         }}
       >
-        <img src={contactUs}></img>
+        <img alt={"Contact Us"} src={contactUs}></img>
       </button>
       <Modal
         isOpen={contactUsModal}
