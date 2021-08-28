@@ -32,6 +32,10 @@ export const FollowUsText = ({ children, ...otherProps }) => {
 //   font-weight: bold;
 // `;
 
+export const Heading = ({ children, ...otherProps }) => {
+  return <p style={{ fontSize: "1vw", ...otherProps.style }}>{children}</p>;
+};
+
 export const Heading1 = ({ children, style }) => {
   return (
     <p
@@ -112,14 +116,14 @@ export const Heading5 = ({ children, style }) => {
   );
 };
 
-export const Sub1 = ({ children, style }) => {
+export const Sub1 = ({ children, style, fontWeight = 400 }) => {
   return (
     <p
       style={{
         fontFamily: "Nunito Sans",
         fontSize: "1.8vw",
         fontStyle: "normal",
-        fontWeight: 800,
+        fontWeight: fontWeight,
         ...style,
       }}
     >

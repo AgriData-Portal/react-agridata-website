@@ -7,6 +7,10 @@ import "_styles/App.css";
 import { screenSize } from "_store";
 import { SmartMarketplace } from "_pages/home-page/smart-marketplace";
 import { Management } from "_pages/home-page/management";
+import { Interface } from "_pages/home-page/interface";
+import { Communication } from "_pages/home-page/communication";
+import { GetInTouch } from "_pages/home-page/getintouch";
+import { Ads } from "_pages/home-page/ads";
 
 const HomePage = (props) => {
   const setWidth = screenSize((state) => state.setWidth);
@@ -24,6 +28,10 @@ const HomePage = (props) => {
       <AsFeatured></AsFeatured>
       <SmartMarketplace></SmartMarketplace>
       <Management></Management>
+      <Interface></Interface>
+      <Communication></Communication>
+      <GetInTouch></GetInTouch>
+      <Ads></Ads>
       <Footer></Footer>
     </div>
   );
