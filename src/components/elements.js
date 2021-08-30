@@ -5,6 +5,7 @@ export const Logo = ({ size, ...otherProps }) => {
   return (
     <img
       src={logo}
+      draggable={false}
       style={{
         width: size === "big" ? "10vw" : 50,
         maxWidth: 155,

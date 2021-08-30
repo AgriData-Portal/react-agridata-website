@@ -77,6 +77,7 @@ const AdsImg = (props) => {
     <img
       src={props.src}
       alt={props.alt}
+      draggable={false}
       style={{ width: "20vw", margin: "1vw" }}
     ></img>
   );

@@ -19,15 +19,21 @@ export const GetInTouch = (props) => {
           flexDirection: "row",
           display: "flex",
           justifyContent: "space-around",
+          alignItems: "center",
         }}
       >
-        <div style={{ width: "35vw" }}>
-          <Font.Heading4 style={{ lineHeight: "3.5vw" }}>
+        <div
+          style={{
+            width: "35vw",
+            marginTop: "-2vw",
+          }}
+        >
+          <Font.Heading4 style={{ lineHeight: "4vw" }}>
             Let's Change The{" "}
             <span style={{ color: "#8EAB3D" }}>Future of Agriculture </span>
             Together
           </Font.Heading4>
-          <Font.Body2 style={{ marginTop: "-3vw" }}>
+          <Font.Body2 style={{ marginTop: "-2vw" }}>
             Interested to Collaborate, Invest, or Find Out More About Us?
           </Font.Body2>
         </div>
@@ -35,7 +41,8 @@ export const GetInTouch = (props) => {
           <img
             src={getInTouch}
             alt={"Get In Touch"}
-            style={{ marginTop: "6vw", width: "20vw" }}
+            draggable={false}
+            style={{ width: "20vw" }}
           ></img>
         </div>
       </div>

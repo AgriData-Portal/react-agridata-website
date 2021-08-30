@@ -10,6 +10,7 @@ export const Communication = (props) => {
   return (
     <div
       style={{
+        height: "85vh",
         maxHeight: 1092,
       }}
     >
@@ -32,7 +33,12 @@ export const Communication = (props) => {
           <Font.Button1>Learn More</Font.Button1>
         </div>
         <div>
-          <img src={phone} alt={"phone"} style={{ width: "35vw" }}></img>
+          <img
+            src={phone}
+            alt={"phone"}
+            draggable={false}
+            style={{ width: "35vw" }}
+          ></img>
         </div>
       </div>
     </div>

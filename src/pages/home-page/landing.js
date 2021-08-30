@@ -36,6 +36,7 @@ export const Landing = (props) => {
         <img
           alt={"Phone Home"}
           src={phoneHome}
+          draggable={false}
           style={{
             width: "28.5vw",
             height: "auto",
@@ -65,6 +66,7 @@ export const Landing = (props) => {
             <img
               alt={"Google Play"}
               src={googlePlay}
+              draggable={false}
               style={{ width: "12vw" }}
             ></img>
             <button
@@ -77,6 +79,7 @@ export const Landing = (props) => {
               <img
                 alt={"App Store"}
                 src={appStore}
+                draggable={false}
                 style={{ width: "12vw" }}
               ></img>
             </button>
@@ -91,6 +94,7 @@ export const Landing = (props) => {
               <img
                 alt="2020 Winner"
                 src={myWinner}
+                draggable={false}
                 style={{ width: "12vw" }}
               ></img>
             </div>

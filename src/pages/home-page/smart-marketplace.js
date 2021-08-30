@@ -22,7 +22,12 @@ const SmartIcon = (props) => {
         marginBottom: "2vw",
       }}
     >
-      <img alt={props.imgAlt} src={props.imgSrc} style={{ width: "8vw" }}></img>
+      <img
+        alt={props.imgAlt}
+        src={props.imgSrc}
+        draggable={false}
+        style={{ width: "8vw" }}
+      ></img>
       <Font.Sub1>{props.title}</Font.Sub1>
       <Font.Body1>{props.content}</Font.Body1>
     </div>
@@ -37,7 +42,7 @@ export const SmartMarketplace = (props) => {
     <div
       className="backgroundGradient"
       style={{
-        height: "247vh",
+        height: "243vh",
         maxHeight: 2160,
         display: "flex",
         flexDirection: "column",
@@ -145,6 +150,7 @@ export const SmartMarketplace = (props) => {
           <img
             alt={"Order Chat"}
             src={OrderChat}
+            draggable={false}
             style={{
               width: "28vw",
               paddingTop: "8vw",
@@ -154,6 +160,7 @@ export const SmartMarketplace = (props) => {
           <img
             alt={"Order Quotation"}
             src={OrderQuotation}
+            draggable={false}
             style={{
               width: "30vw",
               marginLeft: "22vw",

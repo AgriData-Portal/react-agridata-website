@@ -21,6 +21,7 @@ export const Management = (props) => {
         <img
           alt={"Phone Analytics"}
           src={phoneAnalytics}
+          draggable={false}
           style={{
             width: "35vw",
             marginTop: "-3vw",
@@ -30,6 +31,7 @@ export const Management = (props) => {
         <img
           alt={"Management Graph"}
           src={managementGraph}
+          draggable={false}
           style={{
             width: "25vw",
             marginLeft: "30vw",

@@ -19,7 +19,6 @@ export const Footer = (props) => {
         <FollowUsText
           style={{
             textAlign: "right",
-
             paddingRight: "0.5vw",
           }}
         >
@@ -57,7 +56,12 @@ const FollowIcon = (props) => {
     <div style={{ width: "fit-content" }}>
       <button style={{ backgroundColor: "transparent", border: 0 }}>
         <a href={props.link} target="_blank" rel="noopener noreferrer">
-          <img src={props.src} alt={props.alt} style={{ height: "2.5vw" }} />
+          <img
+            src={props.src}
+            alt={props.alt}
+            draggable={false}
+            style={{ height: "2.5vw" }}
+          />
         </a>
       </button>
     </div>

@@ -15,6 +15,7 @@ export const Interface = (props) => {
       className="backgroundGradient"
       style={{
         maxHeight: 1256,
+        paddingTop: "1vw",
       }}
     >
       <div
@@ -45,6 +46,7 @@ export const Interface = (props) => {
         <img
           src={roleLeft}
           alt={"Supplier's role"}
+          draggable={false}
           style={{
             width: "20vw",
             marginRight: "-11vw",
@@ -55,6 +57,7 @@ export const Interface = (props) => {
         <img
           src={phoneLeft}
           alt={"Supplier's phone interface"}
+          draggable={false}
           style={{
             width: "28.5vw",
             height: "auto",
@@ -64,6 +67,7 @@ export const Interface = (props) => {
         <img
           src={phoneRight}
           alt={"Retailer's phone interface"}
+          draggable={false}
           style={{
             width: "28.5vw",
             height: "auto",
@@ -73,6 +77,7 @@ export const Interface = (props) => {
         <img
           src={roleRight}
           alt={"Retailer's role"}
+          draggable={false}
           style={{ width: "20vw", marginLeft: "-8vw", marginTop: "15vw" }}
         ></img>
       </div>

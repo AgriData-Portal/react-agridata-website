@@ -34,24 +34,40 @@ export const AsFeatured = (props) => {
         }}
       >
         <div className="asFeaturedContainer">
-          <img alt={"New Straits Times"} src={straitsTimes}></img>
-          <img alt={"Petronas Future"} src={petronasFuture}></img>
-          <img alt={"Sabah Times"} src={sabahTimes}></img>
+          <img
+            alt={"New Straits Times"}
+            src={straitsTimes}
+            draggable={false}
+          ></img>
+          <img
+            alt={"Petronas Future"}
+            src={petronasFuture}
+            draggable={false}
+          ></img>
+          <img alt={"Sabah Times"} src={sabahTimes} draggable={false}></img>
         </div>
         <div className="asFeaturedContainer">
-          <img alt={"Daily Express"} src={dailyExpress}></img>
-          <img alt={"My Hackathon"} src={myHackathon}></img>
-          <img alt={"DNA"} src={theDna}></img>
+          <img alt={"Daily Express"} src={dailyExpress} draggable={false}></img>
+          <img alt={"My Hackathon"} src={myHackathon} draggable={false}></img>
+          <img alt={"DNA"} src={theDna} draggable={false}></img>
         </div>
         <div className="asFeaturedContainer">
-          <img alt={"Borneo Post"} src={borneoPost}></img>
-          <img alt={"Cradle"} src={theCradle}></img>
-          <img alt={"Vulcan Post"} src={vulcanPost}></img>
+          <img alt={"Borneo Post"} src={borneoPost} draggable={false}></img>
+          <img alt={"Cradle"} src={theCradle} draggable={false}></img>
+          <img alt={"Vulcan Post"} src={vulcanPost} draggable={false}></img>
         </div>
         <div className="asFeaturedContainer">
-          <img alt={"The Malaysian Reserve"} src={malaysiaReserve}></img>
-          <img alt={"Utusan Malaysia"} src={utusanMalaysia}></img>
-          <img alt={"Head's Up"} src={headsUp}></img>
+          <img
+            alt={"The Malaysian Reserve"}
+            src={malaysiaReserve}
+            draggable={false}
+          ></img>
+          <img
+            alt={"Utusan Malaysia"}
+            src={utusanMalaysia}
+            draggable={false}
+          ></img>
+          <img alt={"Head's Up"} src={headsUp} draggable={false}></img>
         </div>
       </div>
     </div>
