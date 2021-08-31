@@ -23,7 +23,7 @@ export const Management = (props) => {
           src={phoneAnalytics}
           draggable={false}
           style={{
-            width: "35vw",
+            width: "34.5vw",
             marginTop: "-3vw",
             marginLeft: "3vw",
           }}
@@ -50,6 +50,67 @@ export const Management = (props) => {
           performance analysis and manage preferred items for easier purchasing.
         </Font.Sub1>
         <Font.Button1 style={{ textAlign: "right" }}>Learn More</Font.Button1>
+      </div>
+    </div>
+  );
+};
+
+export const ManagementPhone = (props) => {
+  const screenWidth = screenSize((state) => state.width);
+  const screenHeight = screenSize((state) => state.height);
+
+  return (
+    <div
+      style={{
+        flexDirection: "column",
+        display: "flex",
+        height: "100vh",
+      }}
+    >
+      <div
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          marginLeft: "10vw",
+          marginRight: "10vw",
+          paddingTop: "10vw",
+        }}
+      >
+        <Font.Heading5 style={{ textAlign: "center", fontSize: "6.5vw" }}>
+          Spend management
+        </Font.Heading5>
+        <Font.Sub1 style={{ textAlign: "center", fontSize: "4vw" }}>
+          Save more money, keep an eye of your monthly charges and be up-to-date
+          in market price fluctuations. You may also conduct supplier
+          performance analysis and manage preferred items for easier purchasing.
+        </Font.Sub1>
+        <Font.Button1
+          style={{ textAlign: "center", fontSize: "4vw", color: "#8EAB3D" }}
+        >
+          Learn More
+        </Font.Button1>
+      </div>
+      <div style={{ height: "54vh" }}>
+        <img
+          alt={"Phone Analytics"}
+          src={phoneAnalytics}
+          draggable={false}
+          style={{
+            width: "65vw",
+          }}
+        ></img>
+        <img
+          alt={"Management Graph"}
+          src={managementGraph}
+          draggable={false}
+          style={{
+            width: "52vw",
+            marginBottom: "70vw",
+            marginLeft: "42vw",
+            marginTop: "-57vh",
+          }}
+        ></img>
       </div>
     </div>
   );

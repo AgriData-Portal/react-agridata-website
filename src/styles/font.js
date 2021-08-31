@@ -44,6 +44,7 @@ export const Heading1 = ({ children, style }) => {
         fontSize: "4.7vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -60,6 +61,7 @@ export const Heading2 = ({ children, style }) => {
         fontSize: "4vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -76,6 +78,7 @@ export const Heading3 = ({ children, style }) => {
         fontSize: "3.6vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -92,6 +95,7 @@ export const Heading4 = ({ children, style }) => {
         fontSize: "3.4vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -108,6 +112,7 @@ export const Heading5 = ({ children, style }) => {
         fontSize: "3vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -124,6 +129,7 @@ export const Sub1 = ({ children, style, fontWeight = 400 }) => {
         fontSize: "1.8vw",
         fontStyle: "normal",
         fontWeight: fontWeight,
+        color: "#444443",
         ...style,
       }}
     >
@@ -140,6 +146,7 @@ export const Sub2 = ({ children, style }) => {
         fontSize: "1.8vw",
         fontStyle: "normal",
         fontWeight: 400,
+        color: "#444443",
         ...style,
       }}
     >
@@ -156,6 +163,7 @@ export const Sub3 = ({ children, style }) => {
         fontSize: "1.5vw",
         fontStyle: "normal",
         fontWeight: 800,
+        color: "#444443",
         ...style,
       }}
     >
@@ -172,6 +180,7 @@ export const Sub4 = ({ children, style }) => {
         fontSize: "1.5vw",
         fontStyle: "normal",
         fontWeight: 600,
+        color: "#444443",
         ...style,
       }}
     >
@@ -188,6 +197,7 @@ export const Sub5 = ({ children, style }) => {
         fontSize: "1.4vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -204,6 +214,7 @@ export const Sub6 = ({ children, style }) => {
         fontSize: "1.3vw",
         fontStyle: "normal",
         fontWeight: 700,
+        color: "#444443",
         ...style,
       }}
     >
@@ -220,6 +231,7 @@ export const Body1 = ({ children, style }) => {
         fontSize: "1.3vw",
         fontStyle: "normal",
         fontWeight: 400,
+        color: "#444443",
         ...style,
       }}
     >
@@ -236,6 +248,7 @@ export const Body2 = ({ children, style }) => {
         fontSize: "1.1vw",
         fontStyle: "normal",
         fontWeight: 400,
+        color: "#444443",
         ...style,
       }}
     >
@@ -252,6 +265,7 @@ export const Button1 = ({ children, style }) => {
         fontSize: "1.8vw",
         fontStyle: "normal",
         fontWeight: 900,
+        color: "#444443",
         ...style,
       }}
     >
@@ -268,6 +282,7 @@ export const Button2 = ({ children, style }) => {
         fontSize: "1.8vw",
         fontStyle: "normal",
         fontWeight: 700,
+        color: "#444443",
         ...style,
       }}
     >
@@ -284,6 +299,7 @@ export const Button3 = ({ children, style }) => {
         fontSize: "1.3vw",
         fontStyle: "normal",
         fontWeight: 700,
+        color: "#444443",
         ...style,
       }}
     >
@@ -300,6 +316,7 @@ export const Button4 = ({ children, style }) => {
         fontSize: "1.1vw",
         fontStyle: "normal",
         fontWeight: 700,
+        color: "#444443",
         ...style,
       }}
     >
@@ -316,6 +333,7 @@ export const Button5 = ({ children, style }) => {
         fontSize: "1vw",
         fontStyle: "normal",
         fontWeight: 700,
+        color: "#444443",
         ...style,
       }}
     >
@@ -332,6 +350,7 @@ export const Caption = ({ children, style }) => {
         fontSize: "1.1vw",
         fontStyle: "normal",
         fontWeight: 600,
+        color: "#444443",
         ...style,
       }}
     >

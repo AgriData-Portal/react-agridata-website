@@ -10,8 +10,7 @@ export const Communication = (props) => {
   return (
     <div
       style={{
-        height: "85vh",
-        maxHeight: 1092,
+        height: "100vh",
       }}
     >
       <div
@@ -19,12 +18,12 @@ export const Communication = (props) => {
           flexDirection: "row",
           display: "flex",
           justifyContent: "space-around",
-          paddingTop: "3vw",
+          marginTop: "5vh",
         }}
       >
-        <div style={{ width: "40vw" }}>
+        <div style={{ marginLeft: "8vw", marginTop: "5vh" }}>
           <Font.Heading5>In-App Communication</Font.Heading5>
-          <Font.Sub1>
+          <Font.Sub1 style={{ width: "38vw" }}>
             Using a lot of apps and tools to keep track of transactions and
             conversations can be draining. AG-Market makes it easy to directly
             communicate about orders and queries, allowing transparency and
@@ -37,7 +36,10 @@ export const Communication = (props) => {
             src={phone}
             alt={"phone"}
             draggable={false}
-            style={{ width: "35vw" }}
+            style={{
+              width: "52vw",
+              maxHeight: "100vh",
+            }}
           ></img>
         </div>
       </div>

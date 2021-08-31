@@ -7,7 +7,7 @@ export const Logo = ({ size, ...otherProps }) => {
       src={logo}
       draggable={false}
       style={{
-        width: size === "big" ? "10vw" : 50,
+        width: size === "big" ? "10vw" : "20vw",
         maxWidth: 155,
         height: "auto",
       }}

@@ -7,6 +7,7 @@ import whatsapp from "_images/footer/whatsapp_vector.png";
 
 import contactUs from "_images/Header/contact-us.png";
 import contactUsWhite from "_images/Header/contactUsWhite.png";
+import iconMenu from "_images/Header/icon.png";
 import { Logo } from "_elements";
 import Font from "_styles";
 
@@ -52,6 +53,35 @@ export const Header = (props) => {
   );
 };
 
+export const HeaderPhone = (props) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        marginLeft: "2vw",
+        marginRight: "2vw",
+        flexWrap: "wrap",
+        paddingTop: "4vw",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ marginLeft: 20 }}>
+        <Logo />
+      </div>
+      <button
+        style={{
+          background: "transparent",
+          border: "transparent",
+          marginRight: "3vw",
+        }}
+      >
+        <img src={iconMenu}></img>
+      </button>
+    </div>
+  );
+};
+
 export const HeaderLanding = (props) => {
   return (
     <div
@@ -75,22 +105,15 @@ export const HeaderLanding = (props) => {
           justifyContent: "space-between",
         }}
       >
-        <Font.Button2 style={{ marginRight: "1vw" }}>AG-Market</Font.Button2>
-        <Font.Button2 style={{ marginRight: "1vw" }}>About Us</Font.Button2>
+        <Font.Button2 style={{ marginRight: "1.5vw" }}>AG-Market</Font.Button2>
+        <Font.Button2 style={{ marginRight: "1.5vw" }}>About Us</Font.Button2>
         <img
           alt={"Contact Us"}
-          src={contactUsWhite}
+          src={contactUs}
           draggable={false}
-          style={{ width: 140, height: "auto" }}
+          style={{ width: "10vw", height: "10vh" }}
         ></img>
       </div>
-    </div>
-  );
-};
-const HeaderWrapper = ({ children }) => {
-  return (
-    <div style={{ paddingTop: "3vh", paddingRight: "5vw", paddingLeft: "5vw" }}>
-      {children}{" "}
     </div>
   );
 };

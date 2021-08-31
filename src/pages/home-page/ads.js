@@ -25,7 +25,6 @@ export const Ads = (props) => {
         <div
           style={{
             margin: "2vw",
-
             justifyContent: "center",
             alignSelf: "center",
           }}

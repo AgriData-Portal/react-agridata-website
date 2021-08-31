@@ -10,6 +10,7 @@ import expenseTracker from "_images/Marketplace/Tracker.png";
 import allData from "_images/Marketplace/Data.png";
 import OrderQuotation from "_images/Marketplace/OrderQuotation.png";
 import OrderChat from "_images/Marketplace/OrderChat.png";
+import Carousel from "react-multi-carousel";
 
 const SmartIcon = (props) => {
   return (
@@ -40,9 +41,8 @@ export const SmartMarketplace = (props) => {
 
   return (
     <div
-      className="backgroundGradient"
       style={{
-        height: "243vh",
+        height: "155vh",
         maxHeight: 2160,
         display: "flex",
         flexDirection: "column",
@@ -55,6 +55,7 @@ export const SmartMarketplace = (props) => {
           textAlign: "center",
           marginLeft: "20vw",
           marginRight: "20vw",
+          marginTop: "5vh",
           paddingBottom: "3vw",
         }}
       >
@@ -62,7 +63,7 @@ export const SmartMarketplace = (props) => {
         <Font.Sub1>
           Managing your business and sourcing goods shouldn’t be exhausting, it
           should be effortless. AG-Market is a fresh way to access high-quality
-          yet low-priced produce and to closely monitor your business
+          yet low-priced produce and to closely monitor your <br /> business
           transactions.
         </Font.Sub1>
       </div>
@@ -136,40 +137,150 @@ export const SmartMarketplace = (props) => {
           ></SmartIcon>
         </div>
       </div>
-      <div style={{ flexDirection: "row", display: "flex" }}>
-        <div style={{ marginLeft: "5vw" }}>
-          <Font.Heading5>Super Simple and Quick</Font.Heading5>
-          <Font.Sub1 style={{ width: "38vw" }}>
-            Busy working? AG-Market does all the hard work for you. From
-            sourcing your items, sending, receiving and keeping all
-            documentations and gathering insights — all in a click.
+    </div>
+  );
+};
+
+const SmartIconPhone = (props) => {
+  return (
+    <div
+      style={{
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2vw",
+      }}
+    >
+      <div style={{ display: "flex", marginLeft: "9vw", marginRight: "5vw" }}>
+        <img
+          alt={props.imgAlt}
+          src={props.imgSrc}
+          draggable={false}
+          style={{ width: "10vw", height: "6vh", marginTop: "1vh" }}
+        ></img>
+        <div style={{ marginLeft: "3vw", marginRight: "3vw" }}>
+          <Font.Sub1 style={{ fontSize: "4vw", fontWeight: "bold" }}>
+            {props.title}
           </Font.Sub1>
-          <Font.Button1>Learn More</Font.Button1>
-        </div>
-        <div>
-          <img
-            alt={"Order Chat"}
-            src={OrderChat}
-            draggable={false}
-            style={{
-              width: "28vw",
-              paddingTop: "8vw",
-              marginLeft: "2vw",
-            }}
-          ></img>
-          <img
-            alt={"Order Quotation"}
-            src={OrderQuotation}
-            draggable={false}
-            style={{
-              width: "30vw",
-              marginLeft: "22vw",
-              marginTop: "-63vw",
-              marginBottom: "15vw",
-            }}
-          ></img>
+          <Font.Body1 style={{ fontSize: "4vw" }}>{props.content}</Font.Body1>
         </div>
       </div>
+    </div>
+  );
+};
+
+export const SmartMarketplacePhone = (props) => {
+  const screenWidth = screenSize((state) => state.width);
+  const screenHeight = screenSize((state) => state.height);
+
+  return (
+    <div
+      style={{
+        height: "100vh",
+        maxHeight: 1080,
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          marginLeft: "10vw",
+          marginRight: "10vw",
+          paddingTop: "10vw",
+          paddingBottom: "2vh",
+        }}
+      >
+        <Font.Heading5 style={{ fontSize: "6.5vw" }}>
+          Your Trusted <br /> Smart Marketplace
+        </Font.Heading5>
+        <Font.Sub1 style={{ fontSize: "4vw" }}>
+          Managing your business and sourcing goods shouldn’t be exhausting, it
+          should be effortless. AG-Market is a fresh way to access high-quality
+          yet low-priced produce and to closely monitor your business
+          transactions.
+        </Font.Sub1>
+      </div>
+
+      <Carousel
+        containerClass="carouselContainer"
+        itemClass="carousel-item-padding"
+        showDots
+        infinite
+        arrows={false}
+        draggable={true}
+        responsive={{
+          tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+          },
+          mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+          },
+        }}
+      >
+        <div style={{ paddingBottom: "2vh" }}>
+          <SmartIconPhone
+            imgAlt={"Paperless"}
+            imgSrc={paperLess}
+            title={"Paperless Process"}
+            content={
+              "Manage all PO documentations effectively without printouts and reduce mountains of paperwork"
+            }
+          ></SmartIconPhone>
+
+          <SmartIconPhone
+            imgAlt={"Quick Approvals"}
+            imgSrc={quickApproval}
+            title={"Quick Approvals"}
+            content={
+              "Send purchase order and approve quotations in one go — anytime, anywhere and on any devices."
+            }
+          ></SmartIconPhone>
+        </div>
+
+        <div style={{ paddingBottom: "2vh" }}>
+          <SmartIconPhone
+            imgAlt={"Instant Access"}
+            imgSrc={instantAccess}
+            title={"Instant Access"}
+            content={
+              "Source produce easily and get the best offers with just a few clicks."
+            }
+          ></SmartIconPhone>
+
+          <SmartIconPhone
+            imgAlt={"Expense Tracker"}
+            imgSrc={expenseTracker}
+            title={"Expense Tracker"}
+            content={
+              "Get insights of your purchases and control your spendings"
+            }
+          ></SmartIconPhone>
+        </div>
+
+        <div style={{ paddingBottom: "2vh" }}>
+          <SmartIconPhone
+            imgAlt={"Smart Alerts"}
+            imgSrc={smartAlert}
+            title={"Smart Alerts"}
+            content={
+              "Easily update your information, and get alerts on orders payments and other transactions"
+            }
+          ></SmartIconPhone>
+
+          <SmartIconPhone
+            imgAlt={"All Data in One Place"}
+            imgSrc={allData}
+            title={"All Data in One Place"}
+            content={
+              "Access all POs, Quotations, Invoices and payment informations in one place."
+            }
+          ></SmartIconPhone>
+        </div>
+      </Carousel>
     </div>
   );
 };

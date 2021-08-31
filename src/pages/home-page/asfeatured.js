@@ -18,11 +18,18 @@ import myHackathon from "_images/As_Featured/MyHackathon.png";
 import malaysiaReserve from "_images/As_Featured/tmr.png";
 import petronasFuture from "_images/As_Featured/Petronas Logo.png";
 import headsUp from "_images/As_Featured/Head Up.png";
+import Font from "_styles";
 
 export const AsFeatured = (props) => {
   return (
-    <div>
-      <p className="asFeatured">AS FEATURED IN</p>
+    <div
+      style={{
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
+    >
+      <Font.Heading5>AS FEATURED IN</Font.Heading5>
       <div
         style={{
           flexDirection: "row",

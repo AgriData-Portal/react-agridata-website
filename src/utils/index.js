@@ -21,3 +21,5 @@ export const max = (num1, num2, num3, num4) => {
     }
   }
 };
+
+export const largestPhoneSize = 520;
