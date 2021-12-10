@@ -29,9 +29,9 @@ const HomePage = (props) => {
   if (screenWidth > largestPhoneSize) {
     return (
       <div>
-        <Landing setLink={props.setLink}></Landing>
+        <Landing setLink={props.setLink} />
         <SmartMarketplace />
-        <AsFeatured />
+        <AsFeatured text="helloWorld">HelloWor;</AsFeatured>
         <SimpleQuick />
         <Management />
         <Interface />

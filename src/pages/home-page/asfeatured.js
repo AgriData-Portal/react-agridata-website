@@ -20,7 +20,8 @@ import petronasFuture from "_images/As_Featured/Petronas Logo.png";
 import headsUp from "_images/As_Featured/Head Up.png";
 import Font from "_styles";
 
-export const AsFeatured = (props) => {
+export const AsFeatured = ({ children, text }) => {
+  var hi = "text";
   return (
     <div
       style={{
@@ -29,7 +30,7 @@ export const AsFeatured = (props) => {
         textAlign: "center",
       }}
     >
-      <Font.Heading5>AS FEATURED IN</Font.Heading5>
+      <p>{hi}</p>
       <div
         style={{
           flexDirection: "row",

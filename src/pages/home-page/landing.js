@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderLanding, HeaderPhone } from "_components/header";
 import "_styles/App.css";
 import phoneHome from "_images/Home/phone-home.png";
@@ -13,7 +13,10 @@ import Font from "_styles";
 export const Landing = (props, size) => {
   const screenWidth = screenSize((state) => state.width);
   const screenHeight = screenSize((state) => state.height);
-
+  const [counter, incrementCounter] = useState("hello");
+  const minus = () => {
+    incrementCounter(counter + "1");
+  };
   return (
     <div
       className="backgroundGradient"
@@ -55,7 +58,7 @@ export const Landing = (props, size) => {
               marginBottom: "2vh",
             }}
           >
-            THE FUTURE OF <br /> MALAYSIA'S AGRISPACE <br /> IS HERE.
+            THE FUTURE OF <br /> MALAYSIA'S AGRISPACE <br /> IS {counter}.
           </Font.Heading3>
           <Font.Sub4 style={{ marginBottom: "5vh", width: "42vw" }}>
             A procurement and management app for retailers to source and secure
@@ -71,9 +74,9 @@ export const Landing = (props, size) => {
               src={googlePlay}
               draggable={false}
               style={{ width: "12vw" }}
+              onClick={() => incrementCounter(counter + 1)}
             ></img>
             <button
-              onClick={() => props.setLink(1)}
               style={{
                 backgroundColor: "transparent",
                 borderColor: "transparent",
@@ -84,6 +87,7 @@ export const Landing = (props, size) => {
                 src={appStore}
                 draggable={false}
                 style={{ width: "12vw" }}
+                onClick={minus}
               ></img>
             </button>
             <div
