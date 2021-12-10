@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { HeaderLanding, HeaderPhone } from "_components/header";
 import "_styles/App.css";
 import phoneHome from "_images/Home/phone-home.png";
