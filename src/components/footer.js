@@ -34,7 +34,7 @@ export const Footer = (props) => {
           <FollowIcon
             src={facebook}
             alt={"facebook_image"}
-            link="https://www.instagram.com/agridataportal/?hl=en"
+            link="https://m.facebook.com/agridataportal"
           />
           <FollowIcon
             src={instagram}
@@ -44,9 +44,18 @@ export const Footer = (props) => {
           <FollowIcon
             src={whatsapp}
             alt={"whatsapp_image"}
-            link="https://www.instagram.com/agridataportal/?hl=en"
+            link="https://api.whatsapp.com/send/?phone=601165691998"
           />
         </div>
+      </div>
+    </FooterWrapper>
+  );
+};
+export const FooterPhone = (props) => {
+  return (
+    <FooterWrapper>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Logo size="small" />
       </div>
     </FooterWrapper>
   );

@@ -27,6 +27,7 @@ export const Interface = (props) => {
           textAlign: "center",
           marginLeft: "20vw",
           marginRight: "20vw",
+          paddingTop: "30px",
         }}
       >
         <Font.Heading5>Customized Interface</Font.Heading5>
@@ -96,7 +97,6 @@ export const InterfacePhone = (props) => {
       style={{
         flexDirection: "column",
         display: "flex",
-        height: "100vh",
       }}
     >
       <div
@@ -106,7 +106,7 @@ export const InterfacePhone = (props) => {
           textAlign: "center",
           marginLeft: "10vw",
           marginRight: "10vw",
-          paddingTop: "10vw",
+          paddingTop: "5px",
         }}
       >
         <Font.Heading5 style={{ textAlign: "center", fontSize: "6.5vw" }}>
@@ -117,22 +117,23 @@ export const InterfacePhone = (props) => {
           Each employees registered to the app may monitor and/or manage
           transactions in a user-friendly interface.
         </Font.Sub1>
-        <Font.Button1
+        {/* <Font.Button1
           style={{ textAlign: "center", fontSize: "4vw", color: "#8EAB3D" }}
         >
           Learn More
-        </Font.Button1>
+        </Font.Button1> */}
       </div>
 
-      <div style={{ height: "58.5vh" }}>
+      <div
+        style={{ display: "flex", flexDirection: "row", alignSelf: "center" }}
+      >
         <img
           src={phoneUp}
           alt={"Supplier's phone interface"}
           draggable={false}
           style={{
-            width: "48vw",
-            marginLeft: "2vw",
-            marginTop: "3vh",
+            objectFit: "contain",
+            width: "200px",
           }}
         ></img>
         <img
@@ -140,9 +141,10 @@ export const InterfacePhone = (props) => {
           alt={"Retailer's phone interface"}
           draggable={false}
           style={{
-            width: "48vw",
-            marginLeft: "46vw",
-            marginTop: "-39vh",
+            objectFit: "contain",
+            width: "200px",
+            marginTop: "10px",
+            marginRight: "40px",
           }}
         ></img>
       </div>

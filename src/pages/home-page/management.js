@@ -49,7 +49,7 @@ export const Management = (props) => {
           in market price fluctuations. You may also conduct supplier
           performance analysis and manage preferred items for easier purchasing.
         </Font.Sub1>
-        <Font.Button1 style={{ textAlign: "right" }}>Learn More</Font.Button1>
+        {/* <Font.Button1 style={{ textAlign: "right" }}>Learn More</Font.Button1> */}
       </div>
     </div>
   );
@@ -64,7 +64,6 @@ export const ManagementPhone = (props) => {
       style={{
         flexDirection: "column",
         display: "flex",
-        height: "100vh",
       }}
     >
       <div
@@ -74,7 +73,7 @@ export const ManagementPhone = (props) => {
           textAlign: "center",
           marginLeft: "10vw",
           marginRight: "10vw",
-          paddingTop: "10vw",
+          paddingTop: "5px",
         }}
       >
         <Font.Heading5 style={{ textAlign: "center", fontSize: "6.5vw" }}>
@@ -85,19 +84,19 @@ export const ManagementPhone = (props) => {
           in market price fluctuations. You may also conduct supplier
           performance analysis and manage preferred items for easier purchasing.
         </Font.Sub1>
-        <Font.Button1
+        {/* <Font.Button1
           style={{ textAlign: "center", fontSize: "4vw", color: "#8EAB3D" }}
         >
           Learn More
-        </Font.Button1>
+        </Font.Button1> */}
       </div>
-      <div style={{ height: "54vh" }}>
+      <div style={{}}>
         <img
           alt={"Phone Analytics"}
           src={phoneAnalytics}
           draggable={false}
           style={{
-            width: "65vw",
+            width: "250px",
           }}
         ></img>
         <img
@@ -106,7 +105,7 @@ export const ManagementPhone = (props) => {
           draggable={false}
           style={{
             width: "52vw",
-            marginBottom: "70vw",
+            marginBottom: "5px",
             marginLeft: "42vw",
             marginTop: "-57vh",
           }}

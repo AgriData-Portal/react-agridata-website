@@ -20,7 +20,7 @@ const SmartIcon = (props) => {
         justifyContent: "center",
         textAlign: "center",
         padding: "2vw",
-        marginBottom: "2vw",
+        marginBottom: "5px",
       }}
     >
       <img
@@ -42,7 +42,6 @@ export const SmartMarketplace = (props) => {
   return (
     <div
       style={{
-        height: "155vh",
         maxHeight: 2160,
         display: "flex",
         flexDirection: "column",
@@ -55,8 +54,8 @@ export const SmartMarketplace = (props) => {
           textAlign: "center",
           marginLeft: "20vw",
           marginRight: "20vw",
-          marginTop: "5vh",
-          paddingBottom: "3vw",
+          marginTop: "20px",
+          paddingBottom: "10px",
         }}
       >
         <Font.Heading5>Your Trusted Smart Marketplace</Font.Heading5>
@@ -76,7 +75,7 @@ export const SmartMarketplace = (props) => {
           justifyContent: "space-around",
           marginLeft: "12vw",
           marginRight: "12vw",
-          paddingBottom: "8vw",
+          paddingBottom: "10px",
         }}
       >
         <div>
@@ -176,7 +175,6 @@ export const SmartMarketplacePhone = (props) => {
     <div
       style={{
         height: "100vh",
-        maxHeight: 1080,
         display: "flex",
         flexDirection: "column",
       }}
@@ -188,8 +186,8 @@ export const SmartMarketplacePhone = (props) => {
           textAlign: "center",
           marginLeft: "10vw",
           marginRight: "10vw",
-          paddingTop: "10vw",
-          paddingBottom: "2vh",
+          paddingTop: "5px",
+          paddingBottom: "5px",
         }}
       >
         <Font.Heading5 style={{ fontSize: "6.5vw" }}>
@@ -197,9 +195,7 @@ export const SmartMarketplacePhone = (props) => {
         </Font.Heading5>
         <Font.Sub1 style={{ fontSize: "4vw" }}>
           Managing your business and sourcing goods shouldn’t be exhausting, it
-          should be effortless. AG-Market is a fresh way to access high-quality
-          yet low-priced produce and to closely monitor your business
-          transactions.
+          should be effortless.
         </Font.Sub1>
       </div>
 
@@ -226,18 +222,14 @@ export const SmartMarketplacePhone = (props) => {
             imgAlt={"Paperless"}
             imgSrc={paperLess}
             title={"Paperless Process"}
-            content={
-              "Manage all PO documentations effectively without printouts and reduce mountains of paperwork"
-            }
+            content={"Manage all PO documentations effectively"}
           ></SmartIconPhone>
 
           <SmartIconPhone
             imgAlt={"Quick Approvals"}
             imgSrc={quickApproval}
             title={"Quick Approvals"}
-            content={
-              "Send purchase order and approve quotations in one go — anytime, anywhere and on any devices."
-            }
+            content={"Send purchase order and approve quotations in one go"}
           ></SmartIconPhone>
         </div>
 
@@ -246,9 +238,7 @@ export const SmartMarketplacePhone = (props) => {
             imgAlt={"Instant Access"}
             imgSrc={instantAccess}
             title={"Instant Access"}
-            content={
-              "Source produce easily and get the best offers with just a few clicks."
-            }
+            content={"Source produce easily and get the best offers"}
           ></SmartIconPhone>
 
           <SmartIconPhone
@@ -266,18 +256,14 @@ export const SmartMarketplacePhone = (props) => {
             imgAlt={"Smart Alerts"}
             imgSrc={smartAlert}
             title={"Smart Alerts"}
-            content={
-              "Easily update your information, and get alerts on orders payments and other transactions"
-            }
+            content={"Easily update your information, and get alerts"}
           ></SmartIconPhone>
 
           <SmartIconPhone
             imgAlt={"All Data in One Place"}
             imgSrc={allData}
             title={"All Data in One Place"}
-            content={
-              "Access all POs, Quotations, Invoices and payment informations in one place."
-            }
+            content={"Access all POs, Quotations and Invoices"}
           ></SmartIconPhone>
         </div>
       </Carousel>

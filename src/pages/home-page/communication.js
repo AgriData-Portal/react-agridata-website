@@ -29,7 +29,7 @@ export const Communication = (props) => {
             communicate about orders and queries, allowing transparency and
             maximum accountability.
           </Font.Sub1>
-          <Font.Button1>Learn More</Font.Button1>
+          {/* <Font.Button1>Learn More</Font.Button1> */}
         </div>
         <div>
           <img

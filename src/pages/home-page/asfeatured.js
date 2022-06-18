@@ -21,7 +21,6 @@ import headsUp from "_images/As_Featured/Head Up.png";
 import Font from "_styles";
 
 export const AsFeatured = ({ children, text }) => {
-  var hi = "text";
   return (
     <div
       style={{
@@ -30,7 +29,7 @@ export const AsFeatured = ({ children, text }) => {
         textAlign: "center",
       }}
     >
-      <p>{hi}</p>
+      <Font.Heading5>As Featured On</Font.Heading5>
       <div
         style={{
           flexDirection: "row",

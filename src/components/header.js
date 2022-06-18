@@ -69,7 +69,7 @@ export const HeaderPhone = (props) => {
       <div style={{ marginLeft: 20 }}>
         <Logo />
       </div>
-      <button
+      {/* <button
         style={{
           background: "transparent",
           border: "transparent",
@@ -77,7 +77,7 @@ export const HeaderPhone = (props) => {
         }}
       >
         <img src={iconMenu}></img>
-      </button>
+      </button> */}
     </div>
   );
 };
@@ -105,13 +105,19 @@ export const HeaderLanding = (props) => {
           justifyContent: "space-between",
         }}
       >
-        <Font.Button2 style={{ marginRight: "1.5vw" }}>AG-Market</Font.Button2>
-        <Font.Button2 style={{ marginRight: "1.5vw" }}>About Us</Font.Button2>
+        {/* <Font.Button2 style={{ marginRight: "1.5vw" }}>AG-Market</Font.Button2>
+        <Font.Button2 style={{ marginRight: "1.5vw" }}>About Us</Font.Button2> */}
         <img
           alt={"Contact Us"}
           src={contactUs}
           draggable={false}
-          style={{ width: "10vw", height: "10vh" }}
+          style={{ width: "10vw", objectFit: "contain", marginBottom: "10px" }}
+          onClick={() =>
+            window.open(
+              "https://api.whatsapp.com/send/?phone=601165691998",
+              "blank"
+            )
+          }
         ></img>
       </div>
     </div>

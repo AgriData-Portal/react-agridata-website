@@ -49,3 +49,46 @@ export const GetInTouch = (props) => {
     </div>
   );
 };
+
+export const GetInTouchPhone = (props) => {
+  const screenWidth = screenSize((state) => state.width);
+  const screenHeight = screenSize((state) => state.height);
+  return (
+    <div
+      className="backgroundGradient"
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+      }}
+    >
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "20px",
+          marginLeft: "30px",
+          marginRight: "30px",
+        }}
+      >
+        <Font.Heading1 style={{ lineHeight: "4vw" }}>
+          Let's Change The Future of Agriculture Together
+        </Font.Heading1>
+
+        <div>
+          <img
+            src={getInTouch}
+            alt={"Get In Touch"}
+            draggable={false}
+            style={{ width: "180px" }}
+            onClick={() =>
+              window.open(
+                "https://api.whatsapp.com/send/?phone=601165691998",
+                "blank"
+              )
+            }
+          ></img>
+        </div>
+      </div>
+    </div>
+  );
+};

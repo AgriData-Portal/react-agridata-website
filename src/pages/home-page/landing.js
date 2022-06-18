@@ -13,15 +13,11 @@ import Font from "_styles";
 export const Landing = (props, size) => {
   const screenWidth = screenSize((state) => state.width);
   const screenHeight = screenSize((state) => state.height);
-  const [counter, incrementCounter] = useState("hello");
-  const minus = () => {
-    incrementCounter(counter + "1");
-  };
+
   return (
     <div
       className="backgroundGradient"
       style={{
-        height: "100vh",
         maxHeight: 1080,
         display: "flex",
         flexDirection: "column",
@@ -49,7 +45,7 @@ export const Landing = (props, size) => {
           />
         )}
 
-        <div style={{ marginTop: "4vw", marginLeft: "5vw" }}>
+        <div style={{ marginTop: "5px", marginLeft: "5vw" }}>
           <Font.Heading3
             style={{
               color: "#8EAB3D",
@@ -58,7 +54,8 @@ export const Landing = (props, size) => {
               marginBottom: "2vh",
             }}
           >
-            THE FUTURE OF <br /> MALAYSIA'S AGRISPACE <br /> IS {counter}.
+            THE FUTURE OF <br /> MALAYSIA'S AGRISPACE <br /> IS GREEN AND
+            DIGITAL.
           </Font.Heading3>
           <Font.Sub4 style={{ marginBottom: "5vh", width: "42vw" }}>
             A procurement and management app for retailers to source and secure
@@ -74,7 +71,12 @@ export const Landing = (props, size) => {
               src={googlePlay}
               draggable={false}
               style={{ width: "12vw" }}
-              onClick={() => incrementCounter(counter + 1)}
+              onClick={() => {
+                window.open(
+                  "https://play.google.com/store/apps/details?id=com.agridata_app",
+                  "blank"
+                );
+              }}
             ></img>
             <button
               style={{
@@ -87,7 +89,12 @@ export const Landing = (props, size) => {
                 src={appStore}
                 draggable={false}
                 style={{ width: "12vw" }}
-                onClick={minus}
+                onClick={() => {
+                  window.open(
+                    "https://apps.apple.com/au/app/ag-market/id1577002466",
+                    "blank"
+                  );
+                }}
               ></img>
             </button>
             <div
@@ -106,6 +113,9 @@ export const Landing = (props, size) => {
                   width: "12vw",
                   marginLeft: "45vw",
                 }}
+                onClick={() => {
+                  window.open("https://www.myhackathon.com.my/", "blank");
+                }}
               ></img>
             </div>
           </div>
@@ -123,10 +133,9 @@ export const LandingPhone = (props, size) => {
     <div
       className="backgroundGradient"
       style={{
-        height: "100vh",
-        maxHeight: 1080,
         display: "flex",
         flexDirection: "column",
+        paddingBottom: "20px",
       }}
     >
       <HeaderPhone setLink={props.setLink}></HeaderPhone>
@@ -134,7 +143,8 @@ export const LandingPhone = (props, size) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          margin: "7vw",
+          marginLeft: "15px",
+          marginRight: "15px",
         }}
       >
         <Font.Heading4
@@ -144,7 +154,6 @@ export const LandingPhone = (props, size) => {
             marginBottom: "2vh",
             textAlign: "center",
             fontSize: "7vw",
-            marginTop: "5vh",
           }}
         >
           THE FUTURE OF MALAYSIA'S AGRISPACE IS HERE.
@@ -178,22 +187,27 @@ export const LandingPhone = (props, size) => {
             alt={"Google Play"}
             src={googlePlay}
             draggable={false}
-            style={{ width: "45vw", margin: "3vw" }}
-          ></img>
-          <button
-            onClick={() => props.setLink(1)}
-            style={{
-              backgroundColor: "transparent",
-              borderColor: "transparent",
+            style={{ width: "140px", margin: "3vw" }}
+            onClick={() => {
+              window.open(
+                "https://play.google.com/store/apps/details?id=com.agridata_app",
+                "blank"
+              );
             }}
-          >
-            <img
-              alt={"App Store"}
-              src={appStore}
-              draggable={false}
-              style={{ width: "45vw" }}
-            ></img>
-          </button>
+          ></img>
+
+          <img
+            alt={"App Store"}
+            src={appStore}
+            draggable={false}
+            style={{ width: "140px" }}
+            onClick={() => {
+              window.open(
+                "https://apps.apple.com/au/app/ag-market/id1577002466",
+                "blank"
+              );
+            }}
+          ></img>
         </div>
       </div>
     </div>

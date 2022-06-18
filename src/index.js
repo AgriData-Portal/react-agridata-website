@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "_styles/index.css";
-import { HomePage, AboutPage } from "_pages";
+import { HomePage } from "_pages";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
@@ -17,14 +17,9 @@ ReactDOM.render(
 reportWebVitals();
 
 function App() {
-  const [link, setLink] = useState(0);
   return (
     <div>
-      {link === 0 ? (
-        <HomePage setLink={setLink}></HomePage>
-      ) : (
-        <AboutPage setLink={setLink}></AboutPage>
-      )}
+      <HomePage />
     </div>
   );
 }
