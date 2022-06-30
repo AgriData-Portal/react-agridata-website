@@ -8,11 +8,7 @@ export const Communication = (props) => {
   const screenWidth = screenSize((state) => state.width);
   const screenHeight = screenSize((state) => state.height);
   return (
-    <div
-      style={{
-        height: "100vh",
-      }}
-    >
+    <div style={{}}>
       <div
         style={{
           flexDirection: "row",

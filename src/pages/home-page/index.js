@@ -27,7 +27,7 @@ const HomePage = (props) => {
 
   if (screenWidth > largestPhoneSize) {
     return (
-      <div>
+      <div style={{ overflowX: "hidden" }}>
         <Landing setLink={props.setLink} />
         <SmartMarketplace />
         <AsFeatured />
@@ -42,7 +42,12 @@ const HomePage = (props) => {
     );
   } else {
     return (
-      <div>
+      <div
+        style={{
+          maxWidth: "100vw",
+          overflowX: "hidden",
+        }}
+      >
         <LandingPhone setLink={props.setLink} size="small" />
         <SmartMarketplacePhone />
         <SimpleQuickPhone />

@@ -14,7 +14,6 @@ export const Management = (props) => {
       style={{
         flexDirection: "row",
         display: "flex",
-        height: "85vh",
       }}
     >
       <div>
