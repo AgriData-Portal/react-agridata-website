@@ -174,9 +174,9 @@ export const SmartMarketplacePhone = (props) => {
   return (
     <div
       style={{
-        height: "100vh",
         display: "flex",
         flexDirection: "column",
+        paddingBottom: "25px",
       }}
     >
       <div
@@ -187,7 +187,6 @@ export const SmartMarketplacePhone = (props) => {
           marginLeft: "10vw",
           marginRight: "10vw",
           paddingTop: "5px",
-          paddingBottom: "5px",
         }}
       >
         <Font.Heading5 style={{ fontSize: "6.5vw" }}>
