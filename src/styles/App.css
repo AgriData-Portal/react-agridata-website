@@ -161,11 +161,6 @@
   height: 100%;
 }
 
-.imgContainer {
-  align-self: flex-end;
-  width: 40vw;
-}
-
 .asFeaturedContainer {
   align-items: center;
   display: flex;

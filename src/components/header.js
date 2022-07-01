@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-
+import { Link } from "react-router-dom";
 import facebook from "_images/footer/facebook_vector.png";
 import instagram from "_images/footer/instagram_vector.png";
 import whatsapp from "_images/footer/whatsapp_vector.png";
@@ -64,20 +64,17 @@ export const HeaderPhone = (props) => {
         paddingTop: "4vw",
         justifyContent: "space-between",
         alignItems: "center",
+        paddingRight: 40,
       }}
     >
       <div style={{ marginLeft: 20 }}>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
-      {/* <button
-        style={{
-          background: "transparent",
-          border: "transparent",
-          marginRight: "3vw",
-        }}
-      >
-        <img src={iconMenu}></img>
-      </button> */}
+      <Link to="/about">
+        <Font.Heading4>About</Font.Heading4>
+      </Link>
     </div>
   );
 };
@@ -96,7 +93,9 @@ export const HeaderLanding = (props) => {
       }}
     >
       <div style={{ marginLeft: 20 }}>
-        <Logo size="big" />
+        <Link to="/">
+          <Logo size="big" />
+        </Link>
       </div>
       <div
         style={{
@@ -105,8 +104,10 @@ export const HeaderLanding = (props) => {
           justifyContent: "space-between",
         }}
       >
-        {/* <Font.Button2 style={{ marginRight: "1.5vw" }}>AG-Market</Font.Button2>
-        <Font.Button2 style={{ marginRight: "1.5vw" }}>About Us</Font.Button2> */}
+        {/* <Font.Button2 style={{ marginRight: "1.5vw" }}>AG-Market</Font.Button2>*/}
+        <Link to="/about">
+          <Font.Button2 style={{ marginRight: "1.5vw" }}>About Us</Font.Button2>
+        </Link>
         <img
           alt={"Contact Us"}
           src={contactUs}

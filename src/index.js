@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "_styles/index.css";
-import { HomePage } from "_pages";
+import { HomePage, AboutPage } from "_pages";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,8 +19,13 @@ reportWebVitals();
 
 function App() {
   return (
-    <div>
-      <HomePage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
