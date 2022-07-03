@@ -65,7 +65,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background: linear-gradient(
         116.72deg,
         #ffffff 7.84%,

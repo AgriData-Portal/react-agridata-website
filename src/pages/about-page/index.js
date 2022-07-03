@@ -4,7 +4,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "_styles/App.css";
 import matthew from "_images/Team/6 4.png";
-import junkaih from "_images/Team/3 7.png";
 import nazri from "_images/Team/2 7.png";
 import natasha from "_images/Team/5 5 (1)_auto_x2.png";
 import marissa from "_images/Team/4 6.png";
@@ -12,11 +11,10 @@ import Modal from "react-modal";
 import { largestPhoneSize } from "_utils";
 import { screenSize } from "_store";
 import Font from "_styles";
-import { Footer, FooterPhone } from "../../components/footer";
+import { FooterPhone } from "../../components/footer";
 
 const AboutPageLaptop = (props) => {
   const [matthewModal, setMatthewModal] = useState(false);
-  const [junkaihModal, setJunkaihModal] = useState(false);
   const [nazriModal, setNazriModal] = useState(false);
   const [natashaModal, setNatashaModal] = useState(false);
   const [marissaModal, setMarissaModal] = useState(false);
@@ -111,20 +109,6 @@ const AboutPageLaptop = (props) => {
             <img
               src={natasha}
               alt="Natasha"
-              draggable={false}
-              style={{ width: "20vw" }}
-            />
-          </button>
-          <button
-            onClick={() => setJunkaihModal(true)}
-            style={{
-              backgroundColor: "transparent",
-              borderColor: "transparent",
-            }}
-          >
-            <img
-              src={junkaih}
-              alt="JunKaih"
               draggable={false}
               style={{ width: "20vw" }}
             />
@@ -243,34 +227,6 @@ const AboutPageLaptop = (props) => {
           }
         ></TeamModal>
       </Modal>
-      <Modal
-        isOpen={junkaihModal}
-        style={{
-          overlay: { backgroundColor: "rgba(140, 140, 140, 0.65)" },
-          content: {
-            border: "transparent",
-            width: "60%",
-            margin: "auto",
-            borderRadius: 10,
-            padding: 0,
-            maxHeight: "55vw",
-          },
-        }}
-        onRequestClose={() => setJunkaihModal(false)}
-      >
-        <TeamModal
-          setJunkaihModal={setJunkaihModal}
-          image={junkaih}
-          name={"Jun Kaih Wong"}
-          title={"Full Stack Developer"}
-          content1={
-            "Currently studying as a 3rd year student in the one of the world’s reputable universities, Nanyang Technological University Singapore, Jun Kaih’s tech skills are showcased in AgriData’s app."
-          }
-          content2={
-            "With a degree in Electrical and Electronics Engineering, he is the Head of Operations at Machine Learning and Data Analytics@EEE at present. He had also built a robotic systems at Garage@EEE, Automation and Innovation Intern at Bollore Logistics and Transport."
-          }
-        ></TeamModal>
-      </Modal>
     </div>
   );
 };
@@ -307,7 +263,6 @@ const TeamModal = (props) => {
 
 const AboutPagePhone = (props) => {
   const [matthewModal, setMatthewModal] = useState(false);
-  const [junkaihModal, setJunkaihModal] = useState(false);
   const [nazriModal, setNazriModal] = useState(false);
   const [natashaModal, setNatashaModal] = useState(false);
   const [marissaModal, setMarissaModal] = useState(false);
@@ -330,54 +285,140 @@ const AboutPagePhone = (props) => {
           and Legal Proficiency -- making the impossible possible
         </Font.Sub4>
       </div>
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-        <PhoneModal
-          img={matthew}
-          alt={"matthew"}
+
+      <Carousel
+        autoPlay
+        autoPlaySpeed={3000}
+        containerClass="carouselContainer"
+        itemClass="carousel-item-padding"
+        infinite
+        arrows={false}
+        draggable={true}
+        responsive={{
+          superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1,
+          },
+          desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+          },
+          tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+          },
+          mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+          },
+        }}
+      >
+        <button
+          onClick={() => setMatthewModal(true)}
+          style={{
+            backgroundColor: "transparent",
+            borderColor: "transparent",
+          }}
+        >
+          <img
+            src={matthew}
+            alt="Matthew"
+            draggable={false}
+            style={{ width: "50vw" }}
+          />
+        </button>
+        <button
+          onClick={() => setMarissaModal(true)}
+          style={{
+            backgroundColor: "transparent",
+            borderColor: "transparent",
+          }}
+        >
+          <img
+            src={marissa}
+            alt="Marissa"
+            draggable={false}
+            style={{ width: "50vw" }}
+          />
+        </button>
+        <button
+          onClick={() => setNazriModal(true)}
+          style={{
+            backgroundColor: "transparent",
+            borderColor: "transparent",
+          }}
+        >
+          <img
+            src={nazri}
+            alt="Nazri"
+            draggable={false}
+            style={{ width: "50vw" }}
+          />
+        </button>
+        <button
+          onClick={() => setNatashaModal(true)}
+          style={{
+            backgroundColor: "transparent",
+            borderColor: "transparent",
+          }}
+        >
+          <img
+            src={natasha}
+            alt="Natasha"
+            draggable={false}
+            style={{ width: "50vw" }}
+          />
+        </button>
+      </Carousel>
+      <FooterPhone />
+
+      <Modal
+        isOpen={matthewModal}
+        style={{
+          overlay: { backgroundColor: "rgba(140, 140, 140, 0.65)" },
+          content: {
+            border: "transparent",
+            width: "70%",
+            margin: "auto",
+            borderRadius: 10,
+            padding: 0,
+            maxHeight: "80vh",
+          },
+        }}
+        onRequestClose={() => setMatthewModal(false)}
+      >
+        <TeamModalPhone
+          setMatthewModal={setMatthewModal}
+          image={matthew}
           name={"Matthew Johnny Kulai"}
-          title={"Brand and Business Developer"}
+          title={"Business and Brand Developer"}
           content1={
             "Matthew is the founder of Hinsou Farm. Growing up in a humble home surrounded by nature, Matt eventually found a passion for agriculture and became a young agropreneur. He specializes in organic produce and manages avocado, sacha inchi and ginger plantation. He also oversees a process centre for sacha inchi oil."
           }
           content2={
             " Matt was a graduate of Swansea University, with a Bachelor’s degree in Materials Engineeering."
           }
-        ></PhoneModal>
-        <PhoneModal
-          img={junkaih}
-          name={"Jun Kaih Wong"}
-          title={"Full Stack Developer"}
-          content1={
-            "Currently studying as a 3rd year student in the one of the world’s reputable universities, Nanyang Technological University Singapore, Jun Kaih’s tech skills are showcased in AgriData’s app."
-          }
-          content2={
-            "With a degree in Electrical and Electronics Engineering, he is the Head of Operations at Machine Learning and Data Analytics@EEE at present. He had also built a robotic systems at Garage@EEE, Automation and Innovation Intern at Bollore Logistics and Transport."
-          }
-        ></PhoneModal>
-        <PhoneModal
-          img={natasha}
-          name={"Natasha Granada"}
-          title={"UI/UX Designer, Social Media Manager"}
-          content1={
-            "Having a passion for arts ever since she was a kid, Natasha fully-immersed herself in digital arts through doing Social Media Management as her business. Graphic designing, Logo-making, website designing, content creation -- she does it all. Her creativity skills also contributes to Agridata through her UI/UX Designer role."
-          }
-          content2={
-            "Her previous job was in the aviation industry, worked as a flight attendant for almost 6 years."
-          }
-        ></PhoneModal>
-        <PhoneModal
-          img={nazri}
-          name={"Mohd Nazri Bin Mohammad Ali"}
-          title={"Operations Manager / PR"}
-          content1={
-            "Nazri’s knowledge and skills in agriculture were influenced by being a 3rd generation ginger planter starting off from his grandparents. With this, he gained vast experiences with traditional farming and grew his connections with people especially other farmers, which is why he is suited as a lead in ground operations. "
-          }
-          content2={
-            "He holds a credential in E-Business and has previously worked as a manager for DJ Enterprise, a logistic company that delivers goods around Sabah."
-          }
-        ></PhoneModal>
-        <PhoneModal
-          img={marissa}
+        ></TeamModalPhone>
+      </Modal>
+      <Modal
+        isOpen={marissaModal}
+        style={{
+          overlay: { backgroundColor: "rgba(140, 140, 140, 0.65)" },
+          content: {
+            border: "transparent",
+            width: "70%",
+            margin: "auto",
+            borderRadius: 10,
+            padding: 0,
+            maxHeight: "80vh",
+          },
+        }}
+        onRequestClose={() => setMarissaModal(false)}
+      >
+        <TeamModalPhone
+          setMarissaModal={setMarissaModal}
+          image={marissa}
           name={"Marissa Johnny Kulai"}
           title={"Legal Advisor"}
           content1={
@@ -386,47 +427,134 @@ const AboutPagePhone = (props) => {
           content2={
             "Marissa is one of the owners of Heart Bit E-ECP, a heart treatment centre."
           }
-        ></PhoneModal>
-      </div>
-      <FooterPhone />
+        ></TeamModalPhone>
+      </Modal>
+      <Modal
+        isOpen={nazriModal}
+        style={{
+          overlay: { backgroundColor: "rgba(140, 140, 140, 0.65)" },
+          content: {
+            border: "transparent",
+            width: "70%",
+            margin: "auto",
+            borderRadius: 10,
+            padding: 0,
+            maxHeight: "80vh",
+          },
+        }}
+        onRequestClose={() => setNazriModal(false)}
+      >
+        <TeamModalPhone
+          setNazriModal={setNazriModal}
+          image={nazri}
+          name={"Mohd Nazri Bin Mohammad Ali"}
+          title={"Operations Manager / PR"}
+          content1={
+            "Nazri’s knowledge and skills in agriculture were influenced by being a 3rd generation ginger planter starting off from his grandparents. With this, he gained vast experiences with traditional farming and grew his connections with people especially other farmers, which is why he is suited as a lead in ground operations. "
+          }
+          content2={
+            "He holds a credential in E-Business and has previously worked as a manager for DJ Enterprise, a logistic company that delivers goods around Sabah."
+          }
+        ></TeamModalPhone>
+      </Modal>
+      <Modal
+        isOpen={natashaModal}
+        style={{
+          overlay: { backgroundColor: "rgba(140, 140, 140, 0.65)" },
+          content: {
+            border: "transparent",
+            width: "70%",
+            margin: "auto",
+            borderRadius: 10,
+            padding: 0,
+            maxHeight: "80vh",
+          },
+        }}
+        onRequestClose={() => setNatashaModal(false)}
+      >
+        <TeamModalPhone
+          setNatashaModal={setNatashaModal}
+          image={natasha}
+          name={"Natasha Granada"}
+          title={"UI/UX Designer, Social Media Manager"}
+          content1={
+            "Having a passion for arts ever since she was a kid, Natasha fully-immersed herself in digital arts through doing Social Media Management as her business. Graphic designing, Logo-making, website designing, content creation -- she does it all. Her creativity skills also contributes to Agridata through her UI/UX Designer role."
+          }
+          content2={
+            "Her previous job was in the aviation industry, worked as a flight attendant for almost 6 years."
+          }
+        ></TeamModalPhone>
+      </Modal>
     </div>
   );
 };
 
-const PhoneModal = (props) => {
+const TeamModalPhone = (props) => {
   return (
     <div
       style={{
-        backgroundColor: "transparent",
-        borderColor: "transparent",
-        flexDirection: "row",
         display: "flex",
-        paddingLeft: 15,
-        paddingRight: 15,
-        marginBottom: 20,
+        flexDirection: "column",
+        flex: 1,
+        height: "100%",
+        backgroundColor: "#e9f7ff",
+        alignItems: "center",
       }}
     >
-      <img width={"35%"} src={props.img} alt={props.alt} draggable={false} />\
-      <div style={{ flexDirection: "column" }}>
-        <p style={{ fontSize: "3vw" }} className="modalName">
-          {props.name}
-        </p>
-        <p className="modalTitle" style={{ fontSize: "3vw" }}>
-          {props.title}
-        </p>
-        <p
-          className="modalContent"
-          style={{ textAlign: "justify", paddingRight: 20, fontSize: 7 }}
-        >
-          {props.content1}
-        </p>
-        <p
-          className="modalContent"
-          style={{ textAlign: "justify", paddingRight: 20, fontSize: 7 }}
-        >
-          {props.content2}
-        </p>
-      </div>
+      <img
+        src={props.image}
+        draggable={false}
+        alt="Matthew"
+        style={{ width: "35%", paddingTop: 15 }}
+      />
+
+      <p
+        style={{
+          fontFamily: "Nunito Sans",
+          fontWeight: 800,
+          fontSize: 10,
+          paddingRight: 5,
+          paddingLeft: 5,
+        }}
+      >
+        {props.name}
+      </p>
+      <p
+        style={{
+          fontFamily: "Nunito Sans",
+          fontWeight: "bold",
+          fontSize: 10,
+          paddingRight: 5,
+          paddingLeft: 5,
+          color: "#8eab3d",
+        }}
+      >
+        {props.title}
+      </p>
+      <p
+        style={{
+          fontFamily: "Nunito Sans",
+          fontWeight: 600,
+          fontSize: 8,
+          paddingRight: "20%",
+          paddingLeft: "20%",
+          textAlign: "center",
+        }}
+      >
+        {props.content1}
+      </p>
+      <p
+        style={{
+          fontFamily: "Nunito Sans",
+          fontWeight: 600,
+          fontSize: 8,
+          paddingRight: "20%",
+          paddingLeft: "20%",
+          textAlign: "center",
+        }}
+      >
+        {props.content2}
+      </p>
     </div>
   );
 };
