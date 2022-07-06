@@ -267,7 +267,7 @@ const AboutPagePhone = (props) => {
   const [natashaModal, setNatashaModal] = useState(false);
   const [marissaModal, setMarissaModal] = useState(false);
   return (
-    <div className="teamBody">
+    <div className="teamBody" style={{ height: "100vh" }}>
       <HeaderPhone setLink={props.setLink}></HeaderPhone>
       <div
         style={{
@@ -277,10 +277,10 @@ const AboutPagePhone = (props) => {
           paddingRight: 50,
         }}
       >
-        <Font.Heading4 style={{ fontSize: "6vw" }}>
+        <Font.Heading4 style={{ fontSize: "8vw" }}>
           Meet The Minds Behind AgriData
         </Font.Heading4>
-        <Font.Sub4 style={{ fontSize: "3vw" }}>
+        <Font.Sub4 style={{ fontSize: "5vw" }}>
           A perfect blend of Technical Wizardy, Agriculture Expertise, Creavity
           and Legal Proficiency -- making the impossible possible
         </Font.Sub4>
@@ -325,7 +325,7 @@ const AboutPagePhone = (props) => {
             src={matthew}
             alt="Matthew"
             draggable={false}
-            style={{ width: "50vw" }}
+            style={{ width: "55vw" }}
           />
         </button>
         <button
@@ -339,7 +339,7 @@ const AboutPagePhone = (props) => {
             src={marissa}
             alt="Marissa"
             draggable={false}
-            style={{ width: "50vw" }}
+            style={{ width: "55vw" }}
           />
         </button>
         <button
@@ -353,7 +353,7 @@ const AboutPagePhone = (props) => {
             src={nazri}
             alt="Nazri"
             draggable={false}
-            style={{ width: "50vw" }}
+            style={{ width: "55vw" }}
           />
         </button>
         <button
@@ -367,7 +367,7 @@ const AboutPagePhone = (props) => {
             src={natasha}
             alt="Natasha"
             draggable={false}
-            style={{ width: "50vw" }}
+            style={{ width: "55vw" }}
           />
         </button>
       </Carousel>
@@ -505,14 +505,14 @@ const TeamModalPhone = (props) => {
         src={props.image}
         draggable={false}
         alt="Matthew"
-        style={{ width: "35%", paddingTop: 15 }}
+        style={{ width: "45%", paddingTop: 15 }}
       />
 
       <p
         style={{
           fontFamily: "Nunito Sans",
           fontWeight: 800,
-          fontSize: 10,
+          fontSize: 14,
           paddingRight: 5,
           paddingLeft: 5,
         }}
@@ -523,7 +523,7 @@ const TeamModalPhone = (props) => {
         style={{
           fontFamily: "Nunito Sans",
           fontWeight: "bold",
-          fontSize: 10,
+          fontSize: 14,
           paddingRight: 5,
           paddingLeft: 5,
           color: "#8eab3d",
@@ -535,9 +535,9 @@ const TeamModalPhone = (props) => {
         style={{
           fontFamily: "Nunito Sans",
           fontWeight: 600,
-          fontSize: 8,
-          paddingRight: "20%",
-          paddingLeft: "20%",
+          fontSize: 11,
+          paddingRight: "10%",
+          paddingLeft: "10%",
           textAlign: "center",
         }}
       >
@@ -547,9 +547,9 @@ const TeamModalPhone = (props) => {
         style={{
           fontFamily: "Nunito Sans",
           fontWeight: 600,
-          fontSize: 8,
-          paddingRight: "20%",
-          paddingLeft: "20%",
+          fontSize: 11,
+          paddingRight: "10%",
+          paddingLeft: "10%",
           textAlign: "center",
         }}
       >
