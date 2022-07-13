@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "_styles/index.css";
-import { HomePage, AboutPage } from "_pages";
+import { HomePage, AboutPage, PrivacyPolicy } from "_pages";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -23,8 +23,9 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<HomePage />} />
-          <Route path="about" element={<AboutPage />} />
         </Route>
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   );
